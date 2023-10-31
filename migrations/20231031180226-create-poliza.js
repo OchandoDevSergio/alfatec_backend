@@ -23,7 +23,7 @@ module.exports = {
         type: Sequelize.STRING
       },
       nºTarjeta: {
-        type: Sequelize.INTEGER
+        type: Sequelize.STRING
       },
       createdAt: {
         allowNull: false,

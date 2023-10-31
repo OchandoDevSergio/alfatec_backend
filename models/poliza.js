@@ -21,7 +21,7 @@ module.exports = (sequelize, DataTypes) => {
   Poliza.init({
     nombreAseguradora: DataTypes.STRING,
     tipoSeguro: DataTypes.STRING,
-    nºTarjeta: DataTypes.INTEGER
+    nºTarjeta: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'Poliza',
