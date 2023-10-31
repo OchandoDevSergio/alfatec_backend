@@ -15,10 +15,10 @@ module.exports = {
       nombre: {
         type: Sequelize.STRING
       },
-      1 ºApellido: {
+      primerApellido: {
         type: Sequelize.STRING
       },
-      2 ºApellido: {
+      segundoApellido: {
         type: Sequelize.STRING
       },
       genero: {
