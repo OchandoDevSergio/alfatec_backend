@@ -35,6 +35,30 @@ profesionalesController.createNewProfesional = async (req, res) => {
   }
 
 
+  profesionalesController.deleteMedicos = async (req, res) => {
+  
+      try {
+          const deleteMedics = await Profesional.destroy({
+            where: {
+              tipoProfesional: "médico"
+            },
+          })
+          return res.json({
+            success: true,
+            message: "Los médicos han sido eliminados de la base de datos",
+            data: deleteMedics,
+          });
+        } catch (error) {
+          return res.status(500).json({
+            success: false,
+            message: "Los médicos no han podido ser eliminados de la base de datos",
+            error: error.message,
+          });
+        }
+      
+  
+  }
+
 
 
   module.exports = profesionalesController;
