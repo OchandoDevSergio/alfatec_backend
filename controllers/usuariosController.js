@@ -59,26 +59,23 @@ usuariosController.getAllUsuarios = async (req, res) => {
 
 
 
-// appointmentsController.createNewAppointment = async (req, res) => {
-//   try {
+usuariosController.createNewUser = async (req, res) => {
+  try {
 
-//     const newAppointment = await Appointment.create({
-//       user_id: req.body.user_id,
-//       artist_id: req.body.artist_id,
-//       date: req.body.date,
-//       hour: req.body.hour,
-//     });
+    const newUser = await Usuario.create({
+      rol: req.body.rol,
+    });
 
-//     return res.send(newAppointment);
+    return res.send(newUser);
 
-//   } catch (error) {
-//     return res.json({
-//       success: false,
-//       message: "No ha sido posible crear la cita",
-//       error: error.message,
-//     });
-//   }
-// }
+  } catch (error) {
+    return res.json({
+      success: false,
+      message: "No ha sido posible crear el usuario",
+      error: error.message,
+    });
+  }
+}
 
 // appointmentsController.modifyAppointment = async (req, res) => {
 //   let body = req.body;

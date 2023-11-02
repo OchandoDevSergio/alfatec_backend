@@ -1,12 +1,12 @@
 
 const router = require('express').Router();
 
-const usuariosController = require('../controllers/usuariosController');
+const pacientesController = require('../controllers/pacientesController');
 
-router.get('/', usuariosController.getAllUsuarios);
+//router.get('/', usuariosController.getAllUsuarios);
 // router.get('/:userId', auth, appointmentsController.getCustomerAppointments);
 // router.get('/artist/:artistId', auth, appointmentsController.getArtistAppointments);
-router.post('/', usuariosController.createNewUser);
+router.post('/', pacientesController.createNewPaciente);
 // router.put('/', auth, appointmentsController.modifyAppointment);
 // router.delete('/:erase', auth, appointmentsController.deleteAppointment);
 

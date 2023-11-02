@@ -13,7 +13,7 @@ module.exports = {
      * }], {});
     */
 
-    await queryInterface.bulkInsert("Profesionales", [
+    await queryInterface.bulkInsert("Profesionals", [
       {
         id: 1,
         usuario_id: 6,
