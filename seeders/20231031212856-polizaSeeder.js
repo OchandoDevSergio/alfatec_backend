@@ -16,7 +16,7 @@ module.exports = {
     await queryInterface.bulkInsert("Polizas", [
       {
         id: 1,
-        usuario_id: 1,
+        paciente_id: 1,
         nombreAseguradora: "Adeslas",
         tipoSeguro: "salud",
         nºTarjeta: "1111111111111111",
@@ -25,7 +25,7 @@ module.exports = {
       },
       {
         id: 2,
-        usuario_id: 1,
+        paciente_id: 1,
         nombreAseguradora: "Adeslas",
         tipoSeguro: "salud",
         nºTarjeta: "2222111111111111",
@@ -34,7 +34,7 @@ module.exports = {
       },
       {
         id: 3,
-        usuario_id: 2,
+        paciente_id: 2,
         nombreAseguradora: "Adeslas",
         tipoSeguro: "salud",
         nºTarjeta: "3333111111111111",
@@ -43,7 +43,7 @@ module.exports = {
       },
       {
         id: 4,
-        usuario_id: 2,
+        paciente_id: 2,
         nombreAseguradora: "Adeslas",
         tipoSeguro: "salud",
         nºTarjeta: "4444111111111111",
@@ -52,7 +52,7 @@ module.exports = {
       },
       {
         id: 5,
-        usuario_id: 3,
+        paciente_id: 3,
         nombreAseguradora: "Adeslas",
         tipoSeguro: "salud",
         nºTarjeta: "5555111111111111",
@@ -61,7 +61,7 @@ module.exports = {
       },
       {
         id: 6,
-        usuario_id: 3,
+        paciente_id: 3,
         nombreAseguradora: "Adeslas",
         tipoSeguro: "salud",
         nºTarjeta: "6666111111111111",
@@ -70,7 +70,7 @@ module.exports = {
       },
       {
         id: 7,
-        usuario_id: 4,
+        paciente_id: 4,
         nombreAseguradora: "Adeslas",
         tipoSeguro: "salud",
         nºTarjeta: "7777111111111111",
@@ -79,7 +79,7 @@ module.exports = {
       },
       {
         id: 8,
-        usuario_id: 4,
+        paciente_id: 4,
         nombreAseguradora: "Adeslas",
         tipoSeguro: "salud",
         nºTarjeta: "8888111111111111",
@@ -88,7 +88,7 @@ module.exports = {
       },
       {
         id: 9,
-        usuario_id: 5,
+        paciente_id: 5,
         nombreAseguradora: "Adeslas",
         tipoSeguro: "salud",
         nºTarjeta: "9999111111111111",
@@ -97,7 +97,7 @@ module.exports = {
       },
       {
         id: 10,
-        usuario_id: 5,
+        paciente_id: 5,
         nombreAseguradora: "Adeslas",
         tipoSeguro: "salud",
         nºTarjeta: "0000111111111111",

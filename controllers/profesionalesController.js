@@ -1,5 +1,5 @@
 
-const { Usuario, Profesional} = require('../models');
+const { Profesional} = require('../models');
 
 const profesionalesController = {};
 

@@ -16,7 +16,6 @@ module.exports = {
     await queryInterface.bulkInsert("Pacientes", [
       {
         id: 1,
-        usuario_id: 1,
         nhc: 123456789,
         nombre: "Jose",
         primerApellido: "García",
@@ -34,7 +33,6 @@ module.exports = {
       },
       {
         id: 2,
-        usuario_id: 2,
         nhc: 223456789,
         nombre: "Antonio",
         primerApellido: "Jiménez",
@@ -52,7 +50,6 @@ module.exports = {
       },
       {
         id: 3,
-        usuario_id: 3,
         nhc: 323456789,
         nombre: "Vicenta",
         primerApellido: "Ferro",
@@ -70,7 +67,6 @@ module.exports = {
       },
       {
         id: 4,
-        usuario_id: 4,
         nhc: 423456789,
         nombre: "María",
         primerApellido: "Carmona",
@@ -88,7 +84,6 @@ module.exports = {
       },
       {
         id: 5,
-        usuario_id: 5,
         nhc: 523456789,
         nombre: "Miguel",
         primerApellido: "Navarro",

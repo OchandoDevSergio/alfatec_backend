@@ -16,7 +16,6 @@ module.exports = {
     await queryInterface.bulkInsert("Profesionals", [
       {
         id: 1,
-        usuario_id: 6,
         nºColegiado: 987654321,
         nombre: "Jacinto",
         primerApellido: "Lorente",
@@ -35,7 +34,6 @@ module.exports = {
       },
       {
         id: 2,
-        usuario_id: 7,
         nºColegiado: 777888999,
         nombre: "Oscar",
         primerApellido: "Rico",
@@ -54,7 +52,6 @@ module.exports = {
       },
       {
         id: 3,
-        usuario_id: 8,
         nºColegiado: 444555666,
         nombre: "Lorena",
         primerApellido: "Martínez",
@@ -73,7 +70,6 @@ module.exports = {
       },
       {
         id: 4,
-        usuario_id: 9,
         nºColegiado: 111222333,
         nombre: "Benito",
         primerApellido: "Macías",
@@ -92,7 +88,6 @@ module.exports = {
       },
       {
         id: 5,
-        usuario_id: 10,
         nºColegiado: 0,
         nombre: "Luisa",
         primerApellido: "Robles",
@@ -111,7 +106,6 @@ module.exports = {
       },
       {
         id: 6,
-        usuario_id: 11,
         nºColegiado: 0,
         nombre: "Jaime",
         primerApellido: "Vela",

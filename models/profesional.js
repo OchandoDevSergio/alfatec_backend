@@ -12,10 +12,6 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
 
-      Profesional.belongsTo(models.Usuario, {
-        foreignKey: 'usuario_id'
-      });
-
     }
   }
   Profesional.init({
