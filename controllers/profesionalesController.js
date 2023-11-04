@@ -3,6 +3,31 @@ const { Profesional} = require('../models');
 
 const profesionalesController = {};
 
+profesionalesController.getAllProfesionales = async (req, res) => {
+
+  try {
+
+      const allProfesionales = await Profesional.findAll();
+
+      return res.json({
+          success: true,
+          message: "Datos de todos los profesionales recuperados",
+          data: allProfesionales,
+      });
+
+
+  } catch (error) {
+
+      return res.status(500).json({
+          success: false,
+          message: "Los datos no han podido ser recuperados",
+          error: error.message,
+      });
+
+  }
+
+}
+
 profesionalesController.createNewProfesional = async (req, res) => {
     try {
   

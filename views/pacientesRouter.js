@@ -3,7 +3,7 @@ const router = require('express').Router();
 
 const pacientesController = require('../controllers/pacientesController');
 
-//router.get('/', usuariosController.getAllUsuarios);
+router.get('/', pacientesController.getAllPacientes);
 // router.get('/:userId', auth, appointmentsController.getCustomerAppointments);
 // router.get('/artist/:artistId', auth, appointmentsController.getArtistAppointments);
 router.post('/', pacientesController.createNewPaciente);

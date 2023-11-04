@@ -2,6 +2,34 @@ const { Paciente} = require('../models');
 
 const pacientesController = {};
 
+
+pacientesController.getAllPacientes = async (req, res) => {
+
+  try {
+
+      const allPacientes = await Paciente.findAll();
+
+      return res.json({
+          success: true,
+          message: "Datos de todos los pacientes recuperados",
+          data: allPacientes,
+      });
+
+
+  } catch (error) {
+
+      return res.status(500).json({
+          success: false,
+          message: "Los datos no han podido ser recuperados",
+          error: error.message,
+      });
+
+  }
+
+}
+
+
+
 pacientesController.createNewPaciente = async (req, res) => {
     try {
   
