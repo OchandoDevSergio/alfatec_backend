@@ -60,8 +60,26 @@ pacientesController.createNewPaciente = async (req, res) => {
     }
   }
 
-
-
-
+pacientesController.deletePaciente = async (req, res) => {
+  
+  try {
+      const deletePaciente = await Paciente.destroy({
+        where: {
+          id: req.params.pacienteId
+        },
+      })
+      return res.json({
+        success: true,
+        message: "El paciente ha sido eliminado de la base de datos",
+        data: deletePaciente,
+      });
+    } catch (error) {
+      return res.status(500).json({
+        success: false,
+        message: "El paciente no ha podido ser eliminado de la base de datos",
+        error: error.message,
+      });
+    }
+}
 
   module.exports = pacientesController;

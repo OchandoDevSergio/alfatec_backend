@@ -8,6 +8,6 @@ router.get('/', pacientesController.getAllPacientes);
 // router.get('/artist/:artistId', auth, appointmentsController.getArtistAppointments);
 router.post('/', pacientesController.createNewPaciente);
 // router.put('/', auth, appointmentsController.modifyAppointment);
-// router.delete('/:erase', auth, appointmentsController.deleteAppointment);
+router.delete('/:pacienteId', pacientesController.deletePaciente);
 
 module.exports = router;

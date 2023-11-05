@@ -9,5 +9,6 @@ const polizasController = require('../controllers/polizasController');
 //router.post('/', pacientesController.createNewPaciente);
 // router.put('/', auth, appointmentsController.modifyAppointment);
 // router.delete('/:erase', auth, appointmentsController.deleteAppointment);
+router.delete('/:polizaId', polizasController.deletePoliza);
 
 module.exports = router;

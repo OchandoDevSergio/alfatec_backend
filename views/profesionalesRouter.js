@@ -9,5 +9,6 @@ router.get('/', profesionalesController.getAllProfesionales);
 router.post('/', profesionalesController.createNewProfesional);
 // router.put('/', auth, appointmentsController.modifyAppointment);
 router.delete('/medics', profesionalesController.deleteMedicos);
+router.delete('/:profesionalId', profesionalesController.deleteProfesional);
 
 module.exports = router;

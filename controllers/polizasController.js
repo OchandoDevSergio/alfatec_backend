@@ -32,5 +32,26 @@ polizasController.getPacientePolizas = async (req, res) => {
   
   }
 
+  polizasController.deletePoliza = async (req, res) => {
+  
+    try {
+        const deletePoliza = await Poliza.destroy({
+          where: {
+            id: req.params.polizaId
+          },
+        })
+        return res.json({
+          success: true,
+          message: "La poliza ha sido eliminada de la base de datos",
+          data: deletePoliza,
+        });
+      } catch (error) {
+        return res.status(500).json({
+          success: false,
+          message: "La poliza no ha podido ser eliminada de la base de datos",
+          error: error.message,
+        });
+      }
+  }
   
   module.exports = polizasController;

@@ -84,6 +84,26 @@ profesionalesController.createNewProfesional = async (req, res) => {
   
   }
 
-
+  profesionalesController.deleteProfesional = async (req, res) => {
+  
+    try {
+        const deleteProfesional = await Profesional.destroy({
+          where: {
+            id: req.params.profesionalId
+          },
+        })
+        return res.json({
+          success: true,
+          message: "El profesional ha sido eliminado de la base de datos",
+          data: deleteProfesional,
+        });
+      } catch (error) {
+        return res.status(500).json({
+          success: false,
+          message: "El profesional no ha podido ser eliminado de la base de datos",
+          error: error.message,
+        });
+      }
+  }
 
   module.exports = profesionalesController;
