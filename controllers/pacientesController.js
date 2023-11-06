@@ -34,7 +34,6 @@ pacientesController.createNewPaciente = async (req, res) => {
     try {
   
       const newPaciente = await Paciente.create({
-        usuario_id: req.body.usuario_id,
         nhc: req.body.nhc,
         nombre: req.body.nombre,
         primerApellido: req.body.primerApellido,
