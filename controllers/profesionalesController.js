@@ -32,7 +32,6 @@ profesionalesController.createNewProfesional = async (req, res) => {
     try {
   
       const newProfesional = await Profesional.create({
-        usuario_id: req.body.usuario_id,
         nºColegiado: req.body.nºColegiado,
         nombre: req.body.nombre,
         primerApellido: req.body.primerApellido,
