@@ -54,4 +54,25 @@ polizasController.getPacientePolizas = async (req, res) => {
       }
   }
   
+  polizasController.createNewPoliza = async (req, res) => {
+    try {
+  
+      const newPoliza = await Poliza.create({
+        paciente_id:  req.body.paciente_id,
+        nombreAseguradora:  req.body.nombreAseguradora,
+        tipoSeguro:  req.body.tipoSeguro,
+        nºTarjeta:  req.body.nºTarjeta,
+      });
+  
+      return res.send(newPoliza);
+  
+    } catch (error) {
+      return res.json({
+        success: false,
+        message: "No ha sido posible crear la poliza",
+        error: error.message,
+      });
+    }
+  }
+
   module.exports = polizasController;
