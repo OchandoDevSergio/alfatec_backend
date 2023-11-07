@@ -75,4 +75,39 @@ polizasController.getPacientePolizas = async (req, res) => {
     }
   }
 
+  polizasController.modifyPoliza = async (req, res) => {
+    let body = req.body;
+  
+    try {
+  
+        const updatePoliza = await Poliza.update(
+          {
+            paciente_id:  req.body.paciente_id,
+            nombreAseguradora:  req.body.nombreAseguradora,
+            tipoSeguro:  req.body.tipoSeguro,
+            nºTarjeta:  req.body.nºTarjeta,
+        },
+        {
+                  where: {
+            id: body.id
+          }
+        }
+        );
+  
+  
+        return res.json({
+          success: true,
+          message: "La poliza ha sido actualizada",
+          data: updatePoliza,
+        });
+  
+    } catch (error) {
+        return res.status(500).json({
+          success: false,
+          message: "No se ha podido actualizar la poliza",
+          error: error.message,
+        }); 
+    }
+  }
+
   module.exports = polizasController;

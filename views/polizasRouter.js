@@ -7,7 +7,7 @@ const polizasController = require('../controllers/polizasController');
  router.get('/:pacienteId', polizasController.getPacientePolizas);
 // router.get('/artist/:artistId', auth, appointmentsController.getArtistAppointments);
 router.post('/', polizasController.createNewPoliza);
-// router.put('/', auth, appointmentsController.modifyAppointment);
+router.put('/', polizasController.modifyPoliza);
 // router.delete('/:erase', auth, appointmentsController.deleteAppointment);
 router.delete('/:polizaId', polizasController.deletePoliza);
 
