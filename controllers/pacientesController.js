@@ -81,4 +81,48 @@ pacientesController.deletePaciente = async (req, res) => {
     }
 }
 
+pacientesController.modifyPaciente = async (req, res) => {
+  let body = req.body;
+
+  try {
+
+      const updatePaciente = await Paciente.update(
+        {
+          nhc:  req.body.nhc,
+          nombre:  req.body.nombre,
+          primerApellido:  req.body.primerApellido,
+          segundoApellido:  req.body.segundoApellido,
+          genero:  req.body.genero,
+          fechaNacimiento:  req.body.fechaNacimiento,
+          nifPasaporte:  req.body.nifPasaporte,
+          calle:  req.body.calle,
+          numero:  req.body.numero,
+          puerta:  req.body.puerta,
+          codigoPostal:  req.body.codigoPostal,
+          ciudad: req.body.ciudad
+      },
+      {
+                where: {
+          id: body.id
+        }
+      }
+      );
+
+
+      return res.json({
+        success: true,
+        message: "El paciente ha sido actualizado",
+        data: updatePaciente,
+      });
+
+  } catch (error) {
+      return res.status(500).json({
+        success: false,
+        message: "No se ha podido actualizar la cita",
+        error: error.message,
+      }); 
+  }
+}
+
+
   module.exports = pacientesController;
