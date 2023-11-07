@@ -118,7 +118,7 @@ pacientesController.modifyPaciente = async (req, res) => {
   } catch (error) {
       return res.status(500).json({
         success: false,
-        message: "No se ha podido actualizar la cita",
+        message: "No se ha podido actualizar al paciente",
         error: error.message,
       }); 
   }
