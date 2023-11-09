@@ -110,4 +110,28 @@ polizasController.getPacientePolizas = async (req, res) => {
     }
   }
 
+  polizasController.deletePolizasPaciente = async (req, res) => {
+
+    try {
+        const deletePolizas = await Poliza.destroy({
+          where: {
+            paciente_id: req.params.pacienteId  
+          },
+        })
+        return res.json({
+          success: true,
+          message: "Las polizas han sido eliminadas",
+          data: deletePolizas,
+        });
+      } catch (error) {
+        return res.status(500).json({
+          success: false,
+          message: "Las polizas han sido eliminadas",
+          error: error.message,
+        });
+      }
+    
+
+}
+
   module.exports = polizasController;

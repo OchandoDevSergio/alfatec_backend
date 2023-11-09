@@ -67,6 +67,8 @@ Siguiendo un esquema modelo vista controlador, la aplicación enruta las peticio
 
 **Eliminar poliza:** DELETE, http://localhost:5000/polizas/${polizaId}
 
+**Eliminar todas las polizas asociadas a un paciente:** DELETE, http://localhost:5000/polizas/${pacienteId}
+
 **Modificar poliza:** PUT, http://localhost:5000/polizas`
 
 ### Recursos alternativos y fuentes
