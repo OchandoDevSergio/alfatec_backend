@@ -112,8 +112,6 @@ polizasController.getPacientePolizas = async (req, res) => {
 
   polizasController.deletePolizasPaciente = async (req, res) => {
 
-    console.log(`fuckkk`, req.params.pacienteId);
-
     try {
         const deletePolizas = await Poliza.destroy({
           where: {

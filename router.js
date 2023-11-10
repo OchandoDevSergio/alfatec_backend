@@ -11,7 +11,7 @@ const polizasRouter = require('./views/polizasRouter.js');
 
 //Routing......
 
-//router.use('/usuarios', usuariosRouter);
+//router.use('/usuarios', usuariosRouter); tabla desestimada
 router.use('/profesionales', profesionalesRouter);
 router.use('/pacientes', pacientesRouter);
 router.use('/polizas', polizasRouter);
