@@ -112,6 +112,8 @@ polizasController.getPacientePolizas = async (req, res) => {
 
   polizasController.deletePolizasPaciente = async (req, res) => {
 
+    console.log(`fuckkk`, req.params.pacienteId);
+
     try {
         const deletePolizas = await Poliza.destroy({
           where: {
@@ -126,7 +128,7 @@ polizasController.getPacientePolizas = async (req, res) => {
       } catch (error) {
         return res.status(500).json({
           success: false,
-          message: "Las polizas han sido eliminadas",
+          message: "Las polizas no han sido eliminadas",
           error: error.message,
         });
       }
